@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+</head>
+
+<body>
+  <h1>Search Your Country</h1>
+  <div class="search-container">
+    <form method="get">
+        <!-- <label name="country">Country Name:</label> -->
+        <input  class="input" type="text" name="country" placeholder="Enter Country Name"><br>
+        <input class="submit" type="submit" value="Submit">
+    </form> <br>
+  </div>
+   
+    <div class="card">
+        <img src="{{jsonResp.flag}}" >
+        <div class="container">
+          <p><b>Country:</b> {{jsonResp.country}}</p> 
+          <p><b>Capital:</b> {{jsonResp.capital}}</p> 
+          <p><b>Population:</b> {{jsonResp.population}}</p> 
+        </div>
+      </div>
+    
+</body>
+
+</html>
+{% endblock %}
